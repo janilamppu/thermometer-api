@@ -1,0 +1,24 @@
+{
+  "name": "thermometer-api",
+  "version": "1.0.0",
+  "description": "Backend to be used with thermometer React Native app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janilamppu/thermometer-api.git"
+  },
+  "author": "Jani Lamppu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janilamppu/thermometer-api/issues"
+  },
+  "homepage": "https://github.com/janilamppu/thermometer-api#readme",
+  "dependencies": {
+    "aws-sdk": "^2.799.0",
+    "axios": "^0.21.0",
+    "moment": "^2.29.1"
+  }
+}

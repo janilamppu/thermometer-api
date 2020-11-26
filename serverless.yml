@@ -1,0 +1,22 @@
+service: weather-station # NOTE: update this with your service name
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+  apiKeys:
+    - ${self:provider.stage}-weather-station
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - ssm:GetParameter
+      Resource: '*'
+functions:
+  middleware:
+    handler: src/index.weather
+    events:
+      - http:
+          path: weatherdata
+          method: get
+          private: true
+          cors: true
