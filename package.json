@@ -19,6 +19,7 @@
   "dependencies": {
     "aws-sdk": "^2.799.0",
     "axios": "^0.21.0",
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "serverless-domain-manager": "^5.1.0"
   }
 }
