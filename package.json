@@ -20,6 +20,7 @@
     "aws-sdk": "^2.799.0",
     "axios": "^0.21.0",
     "moment": "^2.29.1",
-    "serverless-domain-manager": "^5.1.0"
+    "serverless-domain-manager": "^5.1.0",
+    "serverless-dotenv-plugin": "^3.1.0"
   }
 }

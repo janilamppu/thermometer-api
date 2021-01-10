@@ -1,7 +1,10 @@
 service: weather-station # NOTE: update this with your service name
-
+plugins:
+  - serverless-domain-manager
+  - serverless-dotenv-plugin
 provider:
   name: aws
+  stage: 'dev'
   runtime: nodejs12.x
   region: us-east-1
   apiKeys:
@@ -11,6 +14,13 @@ provider:
       Action:
         - ssm:GetParameter
       Resource: '*'
+custom:
+  customDomain:
+    domainName: ${env:DOMAIN_NAME}
+    basePath: ${env:BASE_PATH}
+    stage: ${self:provider.stage}
+    createRoute53Record: true
+
 functions:
   middleware:
     handler: src/index.weather
